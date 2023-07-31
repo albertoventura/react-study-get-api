@@ -1,0 +1,27 @@
+.Card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.Card h1 {
+    font-size: 18px;    
+    margin: 0;
+}
+
+.Card .title {
+    font-family: 'Oswald';
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #707070;
+}
+
+.Card .content {
+        
+        font-family: 'Roboto';
+        text-align: center;
+        padding: 10px 60px 40px;
+        font-size: 25px;
+        font-weight: bolder;
+}

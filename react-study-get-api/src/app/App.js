@@ -1,10 +1,13 @@
-import GetAdvice from '../features/get-advices/GetAdvice';
+import Advice from '../features/advices/Advice';
+import Card from '../shared/components/Card';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <GetAdvice/>
+      <Card>
+        <Advice/>
+      </Card>
     </div>
   );
 }
