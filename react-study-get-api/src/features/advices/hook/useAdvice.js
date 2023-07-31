@@ -7,21 +7,26 @@ const initialAdvice = {
 }
 
 export const useAdvice = () => {
-    const [advice, setAdvice] = useState({payload: initialAdvice, isLoading: true});
+    const [data, setData] = useState({payload: initialAdvice, isLoading: true});
 
     useEffect(()=>{
         console.log('####');
-        GetAdviceService.get().then( result => {
-            if(result){
-                setAdvice(buildAdvice(result));
-                //console.log('res', result.slip.advice);
-            }
-        });
+        getNewAdvice();
     }, []);
 
     function buildAdvice(result){
         return {payload: {text: result.slip.advice, id: result.slip.id}, isLoading: false}
     }
 
-    return advice;
+    function getNewAdvice(){
+        setData({...data, isLoading: true})
+        GetAdviceService.get().then( result => {
+            if(result){
+                setData(buildAdvice(result));
+                //console.log('res', result.slip.advice);
+            }
+        });
+    }
+
+    return [data, getNewAdvice];
 }

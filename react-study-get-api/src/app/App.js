@@ -1,5 +1,5 @@
 import Advice from '../features/advices/Advice';
-import Card from '../shared/components/Card';
+import Card from '../shared/components/card/Card';
 import './App.css';
 
 function App() {

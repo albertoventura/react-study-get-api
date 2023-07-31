@@ -1,0 +1,23 @@
+.RefreshIcon{
+    fill: #fff;
+    height: 30px;
+    width: 30px;
+    
+}
+.RefreshIcon.isLoading {
+    /* transform-origin: 54% 55%;  */   
+    transform-origin: 50% 50%;    
+    animation-name: ckw;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    animation-duration: 1s;
+}
+
+@keyframes ckw {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
